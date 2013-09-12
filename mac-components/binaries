@@ -1,0 +1,30 @@
+# Install native apps
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
+function installcask() {
+	brew cask install "${@}" 2> /dev/null
+}
+
+installcask alfred
+installcask app-cleaner
+installcask backblaze-downloader
+installcask chromium
+installcask dropbox
+installcask evernote
+installcask google-chrome
+installcask google-chrome-canary
+installcask imageoptim
+installcask iterm2
+installcask livereload
+installcask macvim
+installcask mou
+installcask omni-focus
+installcask omni-graffle-pro
+installcask skitch
+installcask skype
+installcask spotify
+installcask sublime-text
+installcask tower
+installcask transmit
+installcask virtualbox

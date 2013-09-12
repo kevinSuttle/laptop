@@ -1,10 +1,3 @@
-fancy_echo "Installing Postgres, a good open source relational database ..."
-  brew install postgres --no-python
-  initdb /usr/local/var/postgres -E utf8
-
-fancy_echo "Installing Redis, a good key-value database ..."
-  brew install redis
-
 fancy_echo "Installing The Silver Searcher (better than ack or grep) to search the contents of files ..."
   brew install the_silver_searcher
 
@@ -20,11 +13,11 @@ fancy_echo "Installing tmux, to save project state and switch between projects .
 fancy_echo "Installing reattach-to-user-namespace, for copy-paste and RubyMotion compatibility with tmux ..."
   brew install reattach-to-user-namespace
 
-fancy_echo "Installing ImageMagick, to crop and resize images ..."
-  brew install imagemagick
+fancy_echo "Installing GRC for better color output in the shell..."
+  brew install grc
 
-fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
-  brew install qt
+fancy_echo "Installing Pow for local Rack app development..."
+  brew install pow
 
-fancy_echo "Installing watch, to execute a program periodically and show the output ..."
-  brew install watch
+fancy_echo "Upgrading bash, because it needs it..."
+  brew install bash

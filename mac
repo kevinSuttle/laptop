@@ -34,15 +34,7 @@ if ! grep -qs "recommended by brew doctor" ~/.zshrc; then
     echo "export PATH='/usr/local/bin:$PATH'\n" >> ~/.zshrc
     source ~/.zshrc
 fi
-
 ### end mac-components/homebrew
-
-fancy_echo "Installing Postgres, a good open source relational database ..."
-  brew install postgres --no-python
-  initdb /usr/local/var/postgres -E utf8
-
-fancy_echo "Installing Redis, a good key-value database ..."
-  brew install redis
 
 fancy_echo "Installing The Silver Searcher (better than ack or grep) to search the contents of files ..."
   brew install the_silver_searcher
@@ -59,14 +51,14 @@ fancy_echo "Installing tmux, to save project state and switch between projects .
 fancy_echo "Installing reattach-to-user-namespace, for copy-paste and RubyMotion compatibility with tmux ..."
   brew install reattach-to-user-namespace
 
-fancy_echo "Installing ImageMagick, to crop and resize images ..."
-  brew install imagemagick
+fancy_echo "Installing GRC for better color output in the shell..."
+  brew install grc
 
-fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
-  brew install qt
+fancy_echo "Installing Pow for local Rack app development..."
+  brew install pow
 
-fancy_echo "Installing watch, to execute a program periodically and show the output ..."
-  brew install watch
+fancy_echo "Upgrading bash, because it needs it..."
+  brew install bash
 ### end mac-components/packages
 
 fancy_echo "Installing rbenv, to change Ruby versions ..."
@@ -86,6 +78,9 @@ fancy_echo "Installing rbenv-gem-rehash so the shell automatically picks up bina
 
 fancy_echo "Installing ruby-build, to install Rubies ..."
   brew install ruby-build
+
+fancy_echo "Installing rbenv-default-gem, to not have to reinstall gems every time a new Ruby is installed ..."
+  brew install rbenv-default-gems
 ### end mac-components/rbenv
 
 fancy_echo "Installing GNU Compiler Collection, a necessary prerequisite to installing Ruby ..."
@@ -108,13 +103,15 @@ fancy_echo "Setting Ruby 2.0.0-p247 as global default Ruby ..."
 fancy_echo "Updating to latest Rubygems version ..."
   gem update --system
 
-fancy_echo "Installing critical Ruby gems for Rails development ..."
-  gem install bundler pg rails unicorn --no-document
+fancy_echo "Installing critical Ruby gems for development ..."
+  gem install bundler rails jekyll --no-document### end common-components/ruby-environment
+
+brew install git
 
 fancy_echo "Installing GitHub CLI client ..."
-  curl http://hub.github.com/standalone -sLo ~/.bin/hub
-  chmod +x ~/.bin/hub
-### end common-components/ruby-environment
+ curl http://hub.github.com/standalone -sLo ~/.bin/hub
+ chmod +x ~/.bin/hub
+### end mac-components/git
 
 fancy_echo "Installing Heroku CLI client ..."
   brew install heroku-toolbelt
