@@ -10,3 +10,4 @@ fancy_echo "Updating to latest Rubygems version ..."
 
 fancy_echo "Installing critical Ruby gems for development ..."
   gem install bundler rails jekyll --no-document
+
