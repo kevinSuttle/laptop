@@ -14,11 +14,11 @@ set -e
 ### end common-components/exit-trap
 
 fancy_echo() {
-  echo "\n$1"
+  printf "\n%b\n" "$1"
 }
 ### end common-components/shared-functions
 
-if ! grep -qiE 'precise|quantal|wheezy|raring|jessie' /etc/os-release
+if ! grep -qiE 'precise|quantal|wheezy|raring|jessie|saucy' /etc/os-release
 then
   fancy_echo "Sorry! we don't currently support that distro."
   exit 1
@@ -33,7 +33,6 @@ fancy_echo "Updating system packages ..."
     sudo apt-get install -y aptitude
   fi
   sudo aptitude update
-  sudo aptitude -y dist-upgrade
 ### end linux-components/debian-package-update
 
 fancy_echo "Installing curl ..."
