@@ -28,6 +28,9 @@ fancy_echo() {
 }
 ### end common-components/shared-functions
 
+xcode-select --install
+### end mac-components/xcode-clt
+
 if [[ -f /etc/zshenv ]]; then
   fancy_echo "Fixing OSX zsh environment bug ..."
     sudo mv /etc/{zshenv,zshrc}
