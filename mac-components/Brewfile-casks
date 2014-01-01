@@ -1,0 +1,58 @@
+# Homebrew-cask
+tap phinze/homebrew-cask
+install brew-cask
+tap caskroom/versions
+tap caskroom/fonts
+
+# Native apps
+cask install alfred
+cask install chromium
+cask install cleanmymac
+cask install colloquy
+cask install dropbox
+cask install droplr
+cask install evernote
+cask install f-lux
+cask install gemini
+cask install google-chrome
+cask install google-chrome-canary
+cask install iterm2
+cask install kindle
+cask install licecap
+cask install macvim
+cask install mou
+cask install omnigraffle
+cask install sizeup
+cask install skitch
+cask install skype
+cask install sourcetree
+cask install spotify
+cask install sublime-text-3
+cask install tower
+cask install vagrant
+cask install virtualbox
+cask install webstorm
+cask install wunderlist
+
+cask alfred link
+
+# Colorpickers
+cask install colorpicker-developer
+cask install colorpicker-hex
+
+# Quicklook plugins
+cask install betterzipql
+cask install qlcolorcode
+cask install qlimagesize
+cask install qlmarkdown
+cask install qlstephen
+cask install quicklook-json
+
+# Open-source Fonts
+cask install font-lato
+cask install font-open-sans
+cask install font-pt-mono
+cask install font-pt-sans
+cask install font-pt-serif
+cask install font-source-code-pro
+cask install font-source-sans-pro
