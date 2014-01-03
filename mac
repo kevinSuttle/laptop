@@ -26,7 +26,8 @@ if (( ! $+commands[brew] )); then
     brew bundle Brewfile-casks
     ln -s "$(brew --prefix)/Library/Contributions/brew_zsh_completion.zsh" /usr/local/share/zsh/site-functions/_brew
 else
-  fancy_echo "Homebrew already installed. Skipping ..."
+  fancy_echo "Homebrew already installed. Updating ..."
+  brew update && brew upgrade
 fi
 ### end mac-components/homebrew
 
