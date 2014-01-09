@@ -1,16 +1,16 @@
 update
 tap homebrew/dupes
 
-install apple-gcc48
+install gcc48
 install openssl
 install git
-install vim --override-system-vi
+install vim --override-system-vi --with-python3 --with-client-server
 install tmux
 install reattach-to-user-namespace
 install zsh
 install grc
 install the_silver_searcher
 install nginx
-install mongodb
 install node
+install mongodb
 install hub

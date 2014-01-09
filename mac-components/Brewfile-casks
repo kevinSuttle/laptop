@@ -10,7 +10,6 @@ cask install chromium
 cask install cleanmymac
 cask install colloquy
 cask install dropbox
-cask install droplr
 cask install evernote
 cask install f-lux
 cask install gemini
@@ -21,13 +20,13 @@ cask install kindle
 cask install licecap
 cask install macvim
 cask install mou
-cask install omnigraffle
+cask install shortcat
 cask install sizeup
 cask install skitch
 cask install skype
-cask install sourcetree
 cask install spotify
 cask install sublime-text-3
+cask install the-unarchiver
 cask install tower
 cask install vagrant
 cask install virtualbox
@@ -49,6 +48,7 @@ cask install qlstephen
 cask install quicklook-json
 
 # Open-source Fonts
+cask install font-fira-sans
 cask install font-lato
 cask install font-open-sans
 cask install font-pt-mono
