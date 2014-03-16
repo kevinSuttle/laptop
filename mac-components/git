@@ -1,5 +1,0 @@
-brew install git
-
-fancy_echo "Installing GitHub CLI client ..."
- curl http://hub.github.com/standalone -sLo ~/.bin/hub
- chmod +x ~/.bin/hub

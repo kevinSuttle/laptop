@@ -10,3 +10,4 @@ npm install -g mongoose
 npm install -g mocha
 npm install -g karma
 npm install -g yo
+npm install -g gulp

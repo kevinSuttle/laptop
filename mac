@@ -1,5 +1,5 @@
-#!/usr/bin/env zsh
-### end common-components/zsh-shebang
+#!/usr/bin/env bash
+### end common-components/bash-shebang
 
 # Welcome to the thoughtbot laptop script! Be prepared to turn your laptop (or
 # desktop, no haters here) into an awesome development machine.
@@ -18,6 +18,10 @@ fancy_echo() {
 }
 ### end common-components/shared-functions
 
+fancy_echo "Changing your shell to zsh ..."
+  chsh -s $(which zsh)
+### end common-components/zsh
+
 if (( ! $+commands[brew] )); then
   fancy_echo "Installing Homebrew, a good OS X package manager ..."
     ruby <(curl -fsS https://raw.github.com/Homebrew/homebrew/go/install)
@@ -31,6 +35,22 @@ else
 fi
 ### end mac-components/homebrew
 
+RUBY_VERSION="2.1.1"
+
+fancy_echo "Installing Ruby $RUBY_VERSION ..."
+  rbenv install $RUBY_VERSION
+
+fancy_echo "Setting $RUBY_VERSION as global default Ruby ..."
+  rbenv global $RUBY_VERSION
+  rbenv rehash
+
+fancy_echo "Updating to latest Rubygems version ..."
+  gem update --system
+
+fancy_echo "Installing standard Ruby gems ..."
+  gem install bundler rails jekyll sass compass github-pages middleman redcarpet --no-document
+### end common-components/ruby-environment
+
 npm install -g grunt
 npm install -g grunt-cli
 npm install -g node-sass
@@ -43,5 +63,6 @@ npm install -g mongoose
 npm install -g mocha
 npm install -g karma
 npm install -g yo
+npm install -g gulp
 ### end mac-components/node
 

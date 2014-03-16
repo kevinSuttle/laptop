@@ -1,0 +1,14 @@
+RUBY_VERSION="2.1.1"
+
+fancy_echo "Installing Ruby $RUBY_VERSION ..."
+  rbenv install $RUBY_VERSION
+
+fancy_echo "Setting $RUBY_VERSION as global default Ruby ..."
+  rbenv global $RUBY_VERSION
+  rbenv rehash
+
+fancy_echo "Updating to latest Rubygems version ..."
+  gem update --system
+
+fancy_echo "Installing standard Ruby gems ..."
+  gem install bundler rails jekyll sass compass github-pages middleman redcarpet --no-document

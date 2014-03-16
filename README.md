@@ -8,17 +8,17 @@ Requirements
 
 ### Mac OS X
 
-1) Install a C compiler.
+Install a C compiler:
 
-For Snow Leopard (10.6): use [OS X GCC Installer](https://github.com/kennethreitz/osx-gcc-installer/)
+For Snow Leopard (10.6): use [OS X GCC
+Installer](https://github.com/kennethreitz/osx-gcc-installer/).
 
-For Lion (10.7) or Mountain Lion (10.8): use [Command Line Tools for XCode](https://developer.apple.com/downloads/index.action)
+For Lion (10.7) or Mountain Lion (10.8): use [Command Line Tools for
+XCode](https://developer.apple.com/downloads/index.action).
 
-For Mavericks (10.9): run `sudo xcodebuild -license` and follow the instructions to accept the XCode agreement.  Then run `xcode-select --install` in your terminal and then click "Install".
-
-2) Set zsh as your login shell:
-
-    chsh -s /bin/zsh
+For Mavericks (10.9): run `sudo xcodebuild -license` and follow the instructions
+to accept the XCode agreement.  Then run `xcode-select --install` in your
+terminal and then click "Install".
 
 ### Linux
 
@@ -31,10 +31,6 @@ We support:
 * Debian stable (currently [wheezy](http://www.debian.org/releases/stable/)).
 * Debian testing (currently [jessie](http://www.debian.org/releases/testing/)).
 
-1) Install zsh and set it as your login shell:
-
-    bash <(wget -qO- https://raw.github.com/kevinSuttle/laptop/master/linux-prerequisites)
-
 Install
 -------
 
@@ -42,17 +38,18 @@ Install
 
 Read, then run the script:
 
-    zsh <(curl -s https://raw.github.com/kevinSuttle/laptop/master/mac)
+    bash <(curl -s https://raw.github.com/thoughtbot/laptop/master/mac)
 
 ### Linux
 
 Read, then run the script:
 
-    zsh <(wget -qO- https://raw.github.com/kevinSuttle/laptop/master/linux)
+    bash <(wget -qO- https://raw.github.com/thoughtbot/laptop/master/linux)
 
 What it sets up
 ---------------
 
+* Zsh as your shell
 * Bundler gem for managing Ruby libraries
 * Exuberant Ctags for indexing files for vim tab completion
 * Foreman gem for serving Rails apps locally
@@ -92,5 +89,5 @@ Please see [CONTRIBUTING.md](https://github.com/thoughtbot/laptop/blob/master/CO
 License
 -------
 
-Laptop is © 2011-2013 thoughtbot, inc. It is free software, and may be
+Laptop is © 2011-2014 thoughtbot, inc. It is free software, and may be
 redistributed under the terms specified in the LICENSE file.

@@ -1,6 +1,8 @@
-common-components/zsh-shebang
+common-components/bash-shebang
 common-components/header
 common-components/exit-trap
 common-components/shared-functions
+common-components/zsh
 mac-components/homebrew
+common-components/ruby-environment
 mac-components/node

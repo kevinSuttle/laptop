@@ -9,7 +9,9 @@ failure() {
 }
 
 vagrant_destroy() {
-  vagrant destroy --force &>/dev/null
+  if [ -z "$KEEP_VM" ]; then
+    vagrant destroy --force &>/dev/null
+  fi
 }
 
 message "Building latest scripts"
@@ -26,22 +28,17 @@ for vagrantfile in test/Vagrantfile.*; do
 
   # TODO: Create a Vagrantfile.mac that uses VMWare Fusion to run OSX
   if echo "$vagrantfile" | grep -q '\.mac$'; then
-    vagrant ssh -c 'echo vagrant | zsh /vagrant/mac' \
+    vagrant ssh -c 'echo vagrant | bash /vagrant/mac' \
       || failure 'Installation script failed to run'
   else
-    vagrant ssh -c 'echo vagrant | sh /vagrant/linux-prerequisites' \
-      || failure 'Prerequisite script failed to run'
-
-    vagrant ssh -c 'zsh /vagrant/linux' \
+    vagrant ssh -c 'echo vagrant | bash /vagrant/linux' \
       || failure 'Installation script failed to run'
   fi
 
-  [ "$(vagrant ssh -c 'echo $SHELL')" = '/usr/bin/zsh' ] \
+  vagrant ssh -c '[ "$SHELL" = "/usr/bin/zsh" ]' \
     || failure 'Installation did not set $SHELL to ZSH'
 
-  ruby="$(vagrant ssh -c 'zsh -i -l -c "ruby --version" | cut -d" " -f 1-2')"
-
-  [ "$ruby" = 'ruby 2.0.0p247' ] \
+  vagrant ssh -c 'zsh -i -l -c "ruby --version" | grep -Fq "ruby 2.1.1"' \
     || failure 'Installation did not install the correct ruby'
 
   message "$vagrantfile tested successfully, shutting down VM"
