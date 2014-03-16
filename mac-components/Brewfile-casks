@@ -5,10 +5,15 @@ tap caskroom/versions
 tap caskroom/fonts
 
 # Native apps
+cask install adobe-creative-cloud
 cask install alfred
+cask install bartender
+cask install ccleaner
 cask install chromium
+cask install cinch
 cask install cleanmymac
-cask install colloquy
+cask install colorschemer-studio
+cask install dragondrop
 cask install dropbox
 cask install evernote
 cask install f-lux
@@ -20,7 +25,9 @@ cask install kindle
 cask install licecap
 cask install macvim
 cask install mou
-cask install shortcat
+cask install opera
+cask install opera-mobile-emulator
+cask install rdio
 cask install sizeup
 cask install skitch
 cask install skype
@@ -48,11 +55,19 @@ cask install qlstephen
 cask install quicklook-json
 
 # Open-source Fonts
+cask install font-clear-sans
+cask install font-droid-sans
+cask install font-droid-sans-mono
+cask install font-droid-serif
 cask install font-fira-sans
+cask install font-inconsolata
 cask install font-lato
 cask install font-open-sans
+cask install font-open-sans-condensed
 cask install font-pt-mono
 cask install font-pt-sans
 cask install font-pt-serif
+cask install font-roboto
 cask install font-source-code-pro
 cask install font-source-sans-pro
+cask install font-ubuntu
